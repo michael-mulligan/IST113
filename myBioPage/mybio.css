@@ -1,0 +1,43 @@
+body {
+	font-family: sans-serif;
+	background-image: url("bg.gif");
+	background-repeat: repeat;
+}
+
+.page {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.header, .sidebar, .content, .footer {
+	border: 1px solid black;
+}
+
+.header {
+	height: 100px;
+	background-color: #b0bafc
+}
+
+.sidebar {
+	background-color: #ecff71;
+	float: left;
+	width: 200px;
+	height: 400px;
+	font-size: 20px;
+}
+
+.content {
+	background-color: #ff8171;
+	height: 400px;
+}
+
+.footer {
+	background-color: #71ffb5;
+	clear: both;
+}
+
+h1 {
+	text-align: center;
+	margin: 0;
+	padding-top: 25px;
+}
