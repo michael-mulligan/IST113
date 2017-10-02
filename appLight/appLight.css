@@ -1,0 +1,40 @@
+#outer {
+  height: 100px;
+  width: 200px;
+  border: 5px solid green;
+  margin: auto;
+}
+
+#inner-left{
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+#inner-right{
+  height: 100px;
+  width: 100px;
+  float: right;
+  
+}
+
+.white{
+  background-color:white;
+  color:white;
+}
+
+.blue{
+  background-color:blue;
+  color:blue;
+}
+
+.black{
+	background-color:black;
+	color:black;
+}
+
+#label {
+	color:white;
+	text-align:center;
+	
+}
