@@ -1,0 +1,15 @@
+body {
+	text-align: center;
+	font-family: Verdana;
+	background-color: #a9e0fc;
+}
+
+span {
+	display: block;
+	margin: 15px 0px 15px 0px;
+}
+
+#play-again {
+	display: none;
+	margin: 0 auto;
+}
