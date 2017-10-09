@@ -1,4 +1,4 @@
-var secretNumber
+var secretNumber;
 var guess = 0;
 var attempts = 0;
 
