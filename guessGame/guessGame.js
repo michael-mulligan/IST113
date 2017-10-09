@@ -3,14 +3,14 @@ var guess = 0;
 var attempts = 0;
 
 function enterNumber(){
-	secretNumber = document.getElementById("num-input").value;
+	secretNumber = parseInt(document.getElementById("num-input").value);
 	document.getElementById("p1-container").style.display = "none";
 	document.getElementById("p2-container").style.display = "block";
 	document.getElementById("result").innerHTML = "Player 2: Enter a guess."
 }
 
 function guessingGame(){
-	guess = document.getElementById("input").value;
+	guess = parseInt(document.getElementById("input").value);
 	
 	if (guess > secretNumber){
 		attempts++
