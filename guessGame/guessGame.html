@@ -5,10 +5,17 @@
 </head>
 <body>
 	<h1>Guessing Game!</h1>
-	<!--<span>Please guess the secret number between 1 and 10.</span>-->
-	<input id="input" type="text" size="5" autocomplete="off"></input>
-	<input id="submit"type="submit" value="Guess" onclick="guessingGame()"></input>
+	
+	<div id="p1-container">
+		<input id="num-input" type="text" size="5" autocomplete="off"></input>
+		<input id="num-submit" type="submit" value="Enter" onclick="enterNumber()"></input>
+	</div>
+	<div id="p2-container">
+		<input id="input" type="text" size="5" autocomplete="off"></input>
+		<input id="submit"type="submit" value="Guess" onclick="guessingGame()"></input>
+	</div>
+	
 	<input id="play-again" type="submit" value="Play again" onclick="window.location.reload()"></input>
-	<span id="result">Please guess the secret number between 1 and 10</span>
+	<span id="result">Player 1: Enter the secret number.</span>
 	
 </body>
