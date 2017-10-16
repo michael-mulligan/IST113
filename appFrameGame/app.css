@@ -5,13 +5,16 @@ body {
 	color: Black;
 	background-color: WhiteSmoke;
 }
+
 div {
 	padding: 0;
 	margin: 0;
 }
+
 button {
 	cursor: pointer;
 }
+
 .hidden {
 	display: none;
 }
