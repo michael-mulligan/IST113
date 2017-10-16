@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>App</title>
+		<link href="app.css" rel="StyleSheet" />
+		<script src="lib/jquery-3.2.1.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<header>App</header>
+			<div id="main">
+				<h1>Guessing Game!</h1>
+	
+				<div id="p1-container">
+					<input id="num-input" type="text" size="5" autocomplete="off"></input>
+					<input id="num-submit" type="submit" value="Enter"></input>
+				</div>
+				<div id="p2-container">
+					<input id="input" type="text" size="5" autocomplete="off"></input>
+					<input id="submit"type="submit" value="Guess"></input>
+				</div>
+				
+				<input id="play-again" type="submit" value="Play again" onclick="window.location.reload()"></input>
+				<span id="result">Player 1: Enter the secret number.</span>
+
+			</div>
+			<footer></footer>
+		</div>
+	</body>
+</html>
