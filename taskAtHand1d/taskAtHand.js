@@ -1,5 +1,3 @@
-"use strict";
-
 // using a function contructor form to create an object
 function TaskAtHandApp()
 {
@@ -13,6 +11,15 @@ function TaskAtHandApp()
 			tasks.push($(this).text());
 		});
 		appStorage.setValue("taskList", tasks);
+	}
+	
+	function saveTaskListPrev()
+	{
+		var tasks = [];
+		$("#task-list .task span.task-name").each(function(){
+			tasks.push($(this).text());
+		});
+		appStorage.setValue("taskListPrev", tasks);
 	}
 	
 	function loadTaskList()
@@ -45,13 +52,19 @@ function TaskAtHandApp()
 		})
 		.focus();
 		
+		$("#undo").on("click", function(){
+			appStorage.setValue("taskList", appStorage.getValue("taskListPrev"));
+			location.reload();
+		});
+		
 		$("#app>header").append(version);
-		loadTaskList();
+		loadTaskList("taskList");
 		setStatus("ready");
 	};
 	
 	function addTask()
 	{
+		saveTaskListPrev();
 		var taskName = $("#new-task-name").val();
 		
 		if (taskName)
@@ -106,12 +119,14 @@ function TaskAtHandApp()
 	
 	function removeTask($task)
 		{
+			saveTaskListPrev();
 			$task.remove();
 			saveTaskList();
 		}
 		
 	function moveTask($task, moveUp)
 	{
+		saveTaskListPrev();
 		if (moveUp)
 		{
 			$task.insertBefore($task.prev());
@@ -124,15 +139,20 @@ function TaskAtHandApp()
 		saveTaskList();
 	}
 	
-	function onEditTaskName ($span){
+	function onEditTaskName ($span)
+	{
+		saveTaskListPrev();
 		$span.hide()
 			.siblings("input.task-name")
 			.val($span.text())
 			.show()
 			.focus();
+		saveTaskList();
 	}
 	
-	function onChangeTaskName($input){
+	function onChangeTaskName($input)
+	{
+		saveTaskListPrev();
 		$input.hide();
 		var $span = $input.siblings("span.task-name");
 		if ($input.val()){
