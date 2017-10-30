@@ -1,0 +1,16 @@
+#app
+{
+    /*background-color: #3f3f3f;
+    background: -webkit-linear-gradient(top, #3f3f3f, black);
+    background: -moz-linear-gradient(top, #3f3f3f, black);
+    background: -ms-linear-gradient(top, #3f3f3f, black);
+    background: linear-gradient(top, #3f3f3f, black);*/
+	//background-image: url("https://i.pinimg.com/originals/c6/df/a2/c6dfa22150790c670c988c5196f6ba0e.gif");
+	//background-repeat: no-repeat;
+	//background-size: 100% 100%;
+}
+#app>header,
+#app>footer
+{
+    background-color: #262626;
+}
