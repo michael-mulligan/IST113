@@ -1,7 +1,11 @@
 #app
 {
-    background-image: url("/images/bg2.gif");
-	background-size: auto;
+	
+	background-color: #3f3f3f;
+    background: -webkit-radial-gradient(top, #3f3f3f, black);
+    background: -moz-radial-gradient(top, #3f3f3f, black);
+    background: -ms-radial-gradient(top, #3f3f3f, black);
+    background: radial-gradient(top, #3f3f3f, black);
 	
 	-moz-transform: scale(-1, 1);
 	-webkit-transform: scale(-1, 1);
