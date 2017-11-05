@@ -6,7 +6,7 @@
     background: -ms-linear-gradient(top, #cbc, #858);
     background: linear-gradient(top, #cbc, #858);
 }
-#app>header,
+#header-toolbar>header,
 #app>footer
 {
     background-color: #606;

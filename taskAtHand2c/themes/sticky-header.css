@@ -1,0 +1,12 @@
+#header-toolbar
+{
+	position: sticky;
+	top: 0;
+	z-index: 500
+}
+
+#toolbar
+{
+	color: WhiteSmoke;
+	background-color: rgba(114, 114, 114, 1);
+}

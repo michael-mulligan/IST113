@@ -1,0 +1,21 @@
+#app
+{
+    background-image: url("/images/bg2.gif");
+	background-size: auto;
+	
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+#header-toolbar>header,
+#app>footer
+{
+    background-color: #262626;
+}
+
+#add-task
+{
+	color: white;
+}
