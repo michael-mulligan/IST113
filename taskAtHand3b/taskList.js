@@ -5,7 +5,7 @@ function Task(name)
 	this.created = new Date();
 	this.priority = Task.priorities.normal;
 	this.status = Task.statuses.notStarted;
-	this.pctCompplete = 0;
+	this.pctComplete = 0;
 	this.startDate = null;
 	this.dueDate = null;
 }

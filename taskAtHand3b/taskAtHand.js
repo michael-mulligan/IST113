@@ -10,10 +10,7 @@ function TaskAtHandApp()
 
 	function saveTaskList()
 	{
-		if (timeoutId)
-		{
-			clearTimeout(timeoutId);
-		}
+		if (timeoutId) clearTimeout(timeoutId);
 		setStatus("saving changes...", true);
 		timeoutId = setTimeout(function()
 		{
@@ -31,17 +28,15 @@ function TaskAtHandApp()
 		rebuildTaskList();
 	}
 	
-	// creating a private function
 	function setStatus(msg, noFade)
 	{
-		$("#app>footer").text(msg).show;
+		$("#app>footer").text(msg).show();
 		if (!noFade)
 		{
 			$("#app>footer").fadeOut(1000);
 		}
 	}
 
-	// creating a public function
 	this.start = function()
 	{
 		$("#new-task-name").keypress(function(e) {
@@ -69,7 +64,7 @@ function TaskAtHandApp()
 			var task = new Task(taskName);
 			taskList.addTask(task);
 			appStorage.setValue("nextTaskId", Task.nextTaskId);
-			addTaskElement(taskName);
+			addTaskElement(task);
 			saveTaskList();
 			$("#new-task-name").val("").focus();
 		}
@@ -80,8 +75,6 @@ function TaskAtHandApp()
 		var $task = $("#task-template .task").clone();
 		$task.data("task-id", task.id);
 		$("span.task-name", $task).text(task.name);
-		
-		/***** *****/
 		
 		$(".details input, .details select", $task).each(function() {
 			var $input = $(this);
