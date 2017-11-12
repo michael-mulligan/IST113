@@ -3,7 +3,7 @@
 // using a function contructor form to create an object
 function TaskAtHandApp()
 {
-	var version = "vX.X",
+	var version = "v3.2",
 		appStorage = new AppStorage("taskAtHand"),
 		taskList = new TaskList(),
 		timeoutId = 0;
