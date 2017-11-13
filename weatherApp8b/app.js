@@ -38,7 +38,7 @@ function MyApp()
 		WeatherWidget = new WeatherWidget();
 		
 		$("#get-weather").on("click", function(){
-			WeatherWidget.getLocation();
+			WeatherWidget.update();
 			
 		});
 	};
