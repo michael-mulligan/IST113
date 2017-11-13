@@ -5,7 +5,7 @@ function WeatherWidget ($widget)
 		$(".results", $widget).hide();
 		$(".loading", $widget).show();
 		getLocation();
-		getWeatherReport();
+		//getWeatherReport();
 	};
 	
 	function getWeatherReport()
@@ -60,6 +60,8 @@ function WeatherWidget ($widget)
 					.text("ERROR: " + error.message)
 					.slideDown();
 			});
+			
+			getWeatherReport();
 		}
 	}
 }
