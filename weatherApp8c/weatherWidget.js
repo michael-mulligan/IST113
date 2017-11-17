@@ -8,7 +8,6 @@ function WeatherWidget ($widget, wuKey)
 		$(".results", $widget).hide();
 		$(".loading", $widget).show();
 		getLocation();
-		getWeatherReport();
 	};
 	
 	function getWeatherReport()
@@ -30,18 +29,19 @@ function WeatherWidget ($widget, wuKey)
 	
 	function populateWeather(data)
 	{
+		console.log(data.properties.periods[0].startTime);
 		var observation = data.current_observation;
 		
-		$(".results header img", $widget).attr("src", observation.icon_url);
+		$(".results header img", $widget).attr("src", data.properties.periods[0].icon);
 			
-		$(".location>span", $widget).text(data.location.city);
+		$(".location>span", $widget).text(data.properties.periods[0].name);
 			
-		$(".conditions>span").each(function(i, e)
+		/*$(".conditions>span").each(function(i, e)
 		{
 			var $span = $(this);
 			var field = $span.data("field");
 			$(this).text(observation[field]);
-		});
+		});*/
 		
 		$(".loading", $widget).fadeOut(function ()
 		{
@@ -61,6 +61,8 @@ function WeatherWidget ($widget, wuKey)
 				
 				lat = position.coords.latitude;
 				lon = position.coords.longitude;
+				getWeatherReport();
+
 			},
 			function(error)
 			{
