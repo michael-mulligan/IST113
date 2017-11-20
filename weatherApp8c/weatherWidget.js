@@ -29,19 +29,18 @@ function WeatherWidget ($widget, wuKey)
 	
 	function populateWeather(data)
 	{
-		console.log(data.properties.periods[0].startTime);
-		var observation = data.current_observation;
+		var observation = data.properties.periods[0];
 		
-		$(".results header img", $widget).attr("src", data.properties.periods[0].icon);
+		$(".results header img", $widget).attr("src", observation.icon);
 			
-		$(".location>span", $widget).text(data.properties.periods[0].name);
+		$(".location>span", $widget).text(observation.name);
 			
-		/*$(".conditions>span").each(function(i, e)
+		$(".conditions>span").each(function(i, e)
 		{
 			var $span = $(this);
 			var field = $span.data("field");
-			$(this).text(observation[field]);
-		});*/
+			$span.text(observation[field]);
+		});
 		
 		$(".loading", $widget).fadeOut(function ()
 		{
