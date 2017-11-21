@@ -23,7 +23,7 @@ function GetQuestion(){
 			$("#data_question").text(data[0].question);
 		})
 		.fail(function(jqXHR, textStatus, errorThrown){
-			//change this later
+			/***** Write error to DOM *****/
 			console.log(errorThrown);
 		});
 }
