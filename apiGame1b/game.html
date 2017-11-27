@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jeopardy!</title>
+		<link href="game.css" rel="StyleSheet" />
+		<script src="lib/jquery-3.2.1.min.js"></script>
+		<script src="game.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+	</head>
+	<body>
+		<header>
+			<h1>Jeopardy!</h1>
+		</header>
+		<div class ="intro"></div>
+		<div class="game">
+			<div id="cat0">
+				<h2>Category 1</h2>
+				<button>$200</button><br/>
+				<button>$400</button><br/>
+				<button>$600</button><br/>
+				<button>$800</button><br/>
+				<button>$1000</button><br/>
+			</div>
+			<div id="cat1">
+				<h2>Category 2</h2>
+				<button>$200</button><br/>
+				<button>$400</button><br/>
+				<button>$600</button><br/>
+				<button>$800</button><br/>
+				<button>$1000</button><br/>
+			</div>
+			<div id="cat2">
+				<h2>Category 3</h2>
+				<button>$200</button><br/>
+				<button>$400</button><br/>
+				<button>$600</button><br/>
+				<button>$800</button><br/>
+				<button>$1000</button><br/>
+			</div>
+		</div>
+		<footer>
+			Score: <span id="score"></span>
+			<button id="startGame">Start</button>
+			<div class="error hidden">
+				Error: <span></span>
+			</div>
+		</footer>
+	</body>
+</html>
