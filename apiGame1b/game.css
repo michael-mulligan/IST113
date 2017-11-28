@@ -14,12 +14,12 @@ header
 button
 {
 	margin: 1em;
-	border: 2px solid;
+	border: 3px solid black;
   	padding: 0.5em 1em;
-  	background-color: white;
   	cursor: pointer;
 	width: 6em;
 	height: 4em;
+	background-color: white;
 }
 
 button:hover
@@ -42,4 +42,10 @@ button:hover
 .game>div
 {
 	margin: 0 auto;
+}
+
+#clueModal
+{
+	width: 1000px;
+	background-color: red;
 }
