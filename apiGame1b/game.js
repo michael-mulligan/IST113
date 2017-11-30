@@ -45,15 +45,28 @@ function StartGame(){
 		})
 	});
 	
-	/*$(#"cat0").children("button").each(function () {
-		this.on('click' function() {
-			
-		})
-	});*/
+	
 }
 
 function GetQuestion(category, index){
-	console.log(category);
+	switch (category)
+	{
+		case 0:
+			$("#clue").text(data0[index].question);
+			break;
+		case 1:
+			$("#clue").text(data1[index].question);
+			break;
+		case 2:
+			$("#clue").text(data2[index].question);
+			break;
+	}
+	
+	$("#clueBox").removeClass("hidden");
+	
+	$("#submitAnswer").on("click", function(){
+		$("#clueBox").addClass("hidden");
+	});
 }
 
 
