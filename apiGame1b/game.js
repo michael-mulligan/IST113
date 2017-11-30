@@ -49,6 +49,7 @@ function StartGame(){
 }
 
 function GetQuestion(category, index){
+	
 	switch (category)
 	{
 		case 0:
