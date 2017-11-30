@@ -1,8 +1,13 @@
+.hidden
+{
+    display: none;
+}
+
 body
 {
 	font-family: 'Open Sans', sans-serif;
 	margin: 0 auto;
-	width: 1000px;
+	width: 80%;
 	text-align: center;
 }
 
@@ -11,7 +16,7 @@ header
 	font-size: 2em;
 }
 
-button
+.game button
 {
 	margin: 1em;
 	border: 3px solid black;
@@ -22,14 +27,9 @@ button
 	background-color: white;
 }
 
-button:hover
+.game button:hover
 {
 	background-color: #f2f2f2;
-}
-
-.hidden
-{
-    display: none;
 }
 
 .game
@@ -44,8 +44,31 @@ button:hover
 	margin: 0 auto;
 }
 
-#clueModal
+.modalBox
 {
-	width: 1000px;
-	background-color: red;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalBox button
+{
+	margin: 1em;
+	border: 3px solid black;
+  	padding: 0.5em 1em;
+  	cursor: pointer;
+	background-color: white;
+}
+
+.modalContent
+{
+	margin: 4em auto;
+	padding: 1em;
+	width: 80%;
+	background-color: white;
+	border: 4px solid black;
 }

@@ -14,40 +14,49 @@
 		<div class ="intro"></div>
 		<div class="game">
 			<div id="cat0">
-				<h2>Category 1</h2>
-				<button>$200</button><br/>
-				<button>$400</button><br/>
-				<button>$600</button><br/>
-				<button>$800</button><br/>
-				<button>$1000</button><br/>
+				<h2>Category X</h2>
+				<button data-category="0">$200</button><br/>
+				<button data-index="1" data-category="0">$400</button><br/>
+				<button data-index="2" data-category="0">$600</button><br/>
+				<button data-index="3" data-category="0">$800</button><br/>
+				<button data-index="4" data-category="0">$1000</button><br/>
 			</div>
 			<div id="cat1">
-				<h2>Category 2</h2>
-				<button>$200</button><br/>
-				<button>$400</button><br/>
-				<button>$600</button><br/>
-				<button>$800</button><br/>
-				<button>$1000</button><br/>
+				<h2>Category Y</h2>
+				<button data-index="0" data-category="1">$200</button><br/>
+				<button data-index="1" data-category="1">$400</button><br/>
+				<button data-index="2" data-category="1">$600</button><br/>
+				<button data-index="3" data-category="1">$800</button><br/>
+				<button data-index="4" data-category="1">$1000</button><br/>
 			</div>
 			<div id="cat2">
-				<h2>Category 3</h2>
-				<button>$200</button><br/>
-				<button>$400</button><br/>
-				<button>$600</button><br/>
-				<button>$800</button><br/>
-				<button>$1000</button><br/>
+				<h2>Category Z</h2>
+				<button data-index="0" data-category="2">$200</button><br/>
+				<button data-index="1" data-category="2">$400</button><br/>
+				<button data-index="2" data-category="2">$600</button><br/>
+				<button data-index="3" data-category="2">$800</button><br/>
+				<button data-index="4" data-category="2">$1000</button><br/>
 			</div>
 		</div>
 		<footer>
 			Score: <span id="score"></span>
-			<button id="startGame">Start</button>
 			<div class="error hidden">
 				Error: <span></span>
 			</div>
 		</footer>
-		<div id="clueModal">
-			<span id="clue">Commissioned in 1944, the battleship with this 2-word nickname was the last launched by the United States</span></br>
-			Answer: <input type="text" name="Answer"><input type="submit" value="Submit">
+		<div id="introBox" class="modalBox">
+			<div class="modalContent">
+				<h1>This is Jeopardy!</h1><br/>
+				<h2>How to play:</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada volutpat nulla, at porttitor odio ornare eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed pharetra vehicula urna vel congue. Donec maximus libero at ligula vulputate aliquam. Fusce et ligula at nibh lacinia eleifend sed non tellus. Nullam rutrum, mauris vel fermentum blandit, arcu nisi tincidunt ipsum, a interdum nisl diam eu mauris. Maecenas ac est at mauris pulvinar bibendum. Phasellus ultrices est ut dui blandit suscipit. Fusce nec volutpat nulla, eu facilisis leo. Phasellus eleifend lectus placerat, ornare ipsum eu, iaculis urna.</p>
+				<button id="startGame">Begin</button>
+			</div>
+		</div>
+		<div id="clueBox"class="modalBox hidden">
+			<div class="modalContent">
+				<h3 id="clue">Swag money is a phrase used by this badass motherfucker</h3></br>
+				Answer: <input type="text" name="Answer"><input type="submit" value="Submit" id="test">
+			</div>
 		</div>
 	</body>
 </html>

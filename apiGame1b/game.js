@@ -4,8 +4,17 @@ var data2;
 
 function Game(){
 	
-	$("#startGame").on('click', function(){
+	$("#startGame").on("click", function(){
 		StartGame();
+		$("#introBox").addClass("hidden");
+	});
+	
+	$(".game > div").children("button").each(function(){
+		var category = $(this).data().category;
+		var index = $(this).data().index;
+		$(this).on("click", function(){
+			GetQuestion(category, index);
+		});
 	});
 };
 
@@ -30,19 +39,23 @@ function StartGame(){
 					data2 = data;
 					break;
 			}
-			console.log(data);
 		})
 		.fail(function(jqXHR, textStatus, errorThrown){
 			console.log(errorThrown);
 		})
 	});
 	
-	$(#"cat0").children("button").each(function () {
+	/*$(#"cat0").children("button").each(function () {
 		this.on('click' function() {
 			
 		})
-	});
+	});*/
 }
+
+function GetQuestion(category, index){
+	console.log(category);
+}
+
 
 window.onload = function() {
 	Game();
