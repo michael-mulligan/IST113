@@ -14,7 +14,7 @@
 		<div class ="intro"></div>
 		<div class="game">
 			<div id="cat0">
-				<h2>Category X</h2>
+				<h2></h2>
 				<button data-index="0" data-category="0">$200</button><br/>
 				<button data-index="1" data-category="0">$400</button><br/>
 				<button data-index="2" data-category="0">$600</button><br/>
@@ -22,7 +22,7 @@
 				<button data-index="4" data-category="0">$1000</button><br/>
 			</div>
 			<div id="cat1">
-				<h2>Category Y</h2>
+				<h2></h2>
 				<button data-index="0" data-category="1">$200</button><br/>
 				<button data-index="1" data-category="1">$400</button><br/>
 				<button data-index="2" data-category="1">$600</button><br/>
@@ -30,7 +30,7 @@
 				<button data-index="4" data-category="1">$1000</button><br/>
 			</div>
 			<div id="cat2">
-				<h2>Category Z</h2>
+				<h2></h2>
 				<button data-index="0" data-category="2">$200</button><br/>
 				<button data-index="1" data-category="2">$400</button><br/>
 				<button data-index="2" data-category="2">$600</button><br/>
@@ -39,7 +39,7 @@
 			</div>
 		</div>
 		<footer>
-			Score: <span id="score"></span>
+			<h2>Score: <span id="score"></span></h2>
 			<div class="error hidden">
 				Error: <span></span>
 			</div>
@@ -48,14 +48,25 @@
 			<div class="modalContent">
 				<h1>This is Jeopardy!</h1><br/>
 				<h2>How to play:</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada volutpat nulla, at porttitor odio ornare eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed pharetra vehicula urna vel congue. Donec maximus libero at ligula vulputate aliquam. Fusce et ligula at nibh lacinia eleifend sed non tellus. Nullam rutrum, mauris vel fermentum blandit, arcu nisi tincidunt ipsum, a interdum nisl diam eu mauris. Maecenas ac est at mauris pulvinar bibendum. Phasellus ultrices est ut dui blandit suscipit. Fusce nec volutpat nulla, eu facilisis leo. Phasellus eleifend lectus placerat, ornare ipsum eu, iaculis urna.</p>
-				<button id="startGame">Begin</button>
+				<button id="startGame">Let's begin!</button>
 			</div>
 		</div>
 		<div id="clueBox"class="modalBox hidden">
 			<div class="modalContent">
-				<h3 id="clue"></h3></br>
-				Answer: <input type="text" name="Answer"><input type="submit" value="Submit" id="submitAnswer">
+				<h2 id="clue"></h3></br>
+				<div id="answerPrompt">
+					Answer: <input type="text" name="Answer" id="inputAnswer">   
+					<input type="submit" value="Submit" id="submitAnswer">   
+					<input type="button" value="Skip" id="skip">
+				</div>
+				<div id="AnswerResult" class="hidden">
+					Your answer: <span id="playerAnswer"></span></br>
+					Answer: <span id="answer"></span><br/>
+					<span id="result"></span><br/>
+					(Validate) My answer was actually:
+					<input type="button" value="Correct" id="addValue">
+					<input type="button" value="Incorrect" id="subtractValue">
+				</div>
 			</div>
 		</div>
 	</body>
