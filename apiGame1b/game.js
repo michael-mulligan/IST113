@@ -23,7 +23,7 @@ function Game(){
 		});
 	});
 	
-	$("#score").text("$" + score);
+	$("#score").text(score);
 };
 
 function StartGame(){
@@ -58,8 +58,8 @@ function GetQuestion(category, index){
 	var answer;
 	var cashValue = -1;
 	
+	$("#answerResult").addClass("hidden");
 	$("#answerPrompt").removeClass("hidden");
-	$("#AnswerResult").addClass("hidden");
 	$("#inputAnswer").val("")
 	
 	switch (category)
@@ -104,7 +104,7 @@ function ProcessAnswer(answer, cashValue){
 	$("#playerAnswer").text(playerAnswer);
 	$("#answer").text(answer);
 	
-	$("#AnswerResult").removeClass("hidden");
+	$("#answerResult").removeClass("hidden");
 	if (check < 4)
 	{
 		$("#result").addClass("green").removeClass("red").text("Correct!")
@@ -118,14 +118,12 @@ function ProcessAnswer(answer, cashValue){
 		score += cashValue;
 		$("#clueBox").addClass("hidden");
 		FormatScore(score);
-		$("#score").text("$" + score);
 	});
 	
 	$("#subtractValue").off().on("click", function(){
 		score -= cashValue;
 		$("#clueBox").addClass("hidden");
 		FormatScore(score);
-		$("#score").text("$" + score);
 	});
 }
 
@@ -171,8 +169,12 @@ function FormatScore(score){
 }
 
 setInterval(function() {
-  if (counter == 2){
-	  alert("done!!");
+  if (counter == 15){
+	  $("#finalScore").text(score);
+	  $("#endBox").removeClass("hidden")
+	  $("#playAgain").on("click", function(){
+		  window.location.reload()
+	  });
   }
 }, 2000);
 
