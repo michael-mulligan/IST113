@@ -3,6 +3,7 @@ var data1;
 var data2;
 
 var score = 0;
+var counter = 0;
 
 function Game(){
 	
@@ -87,7 +88,9 @@ function GetQuestion(category, index){
 		ProcessAnswer(answer, cashValue);
 	});
 	
-	$("#skip").on("click", function(){
+	$("#skip").off().on("click", function(){
+		++counter;
+		console.log(counter);
 		$("#clueBox").addClass("hidden");
 	});
 }
@@ -114,12 +117,14 @@ function ProcessAnswer(answer, cashValue){
 	$("#addValue").off().on("click", function(){
 		score += cashValue;
 		$("#clueBox").addClass("hidden");
+		FormatScore(score);
 		$("#score").text("$" + score);
 	});
 	
 	$("#subtractValue").off().on("click", function(){
 		score -= cashValue;
 		$("#clueBox").addClass("hidden");
+		FormatScore(score);
 		$("#score").text("$" + score);
 	});
 }
@@ -149,6 +154,27 @@ function CheckAnswer(a, b) {
 		} t = u;
 	} return u[n];
 }
+
+function FormatScore(score){
+	if (score < 0){
+		$("#score").text(score);
+		$("#score").addClass("red");
+		++counter;
+		console.log(counter);
+	}
+	else {
+		$("#score").text(score);
+		$("#score").removeClass("red");
+		++counter;
+		console.log(counter);
+	}
+}
+
+setInterval(function() {
+  if (counter == 2){
+	  alert("done!!");
+  }
+}, 2000);
 
 window.onload = function() {
 	Game();
